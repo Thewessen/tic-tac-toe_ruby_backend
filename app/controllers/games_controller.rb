@@ -1,7 +1,8 @@
 class GamesController < ApplicationController
   def show
     # game = Game.find(params[:id])
-    render json: Game.find(params[:id])
+    # render json: { status: 400, data: Game.find(params[:id]) }
+    render 'show'
   end
 
   def new

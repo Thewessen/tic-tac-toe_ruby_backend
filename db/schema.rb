@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_08_30_093046) do
 
   create_table "games", force: :cascade do |t|
-    t.json "board_state", default: "{\"state\":[[\"\",\"\",\"\"],[\"\",\"\",\"\"],[\"\",\"\",\"\"]]}"
+    t.string "boardstate", default: ",,,,,,,,"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

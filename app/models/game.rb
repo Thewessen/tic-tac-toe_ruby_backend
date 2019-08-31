@@ -1,4 +1,4 @@
 class Game < ApplicationRecord
-  # Add a JSON specific test?
-  validates :board_state, presence: true
+  # Add a string specific test?
+  validates :boardstate, presence: true
 end

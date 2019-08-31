@@ -1,7 +1,7 @@
 class CreateGames < ActiveRecord::Migration[6.0]
   def change
     create_table :games do |t|
-      t.json :board_state, :default => ActiveSupport::JSON.encode({ state: [['', '', ''],['', '', ''],['', '', '']] })
+      t.string :boardstate, :default => ",,,,,,,,"
 
       t.timestamps
     end

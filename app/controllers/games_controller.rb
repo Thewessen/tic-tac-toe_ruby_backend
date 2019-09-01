@@ -1,19 +1,16 @@
 class GamesController < ApplicationController
   def show
-    @game = Game.find(params[:id])
+    render json: Game.find(params[:id])
   end
 
   def new
-    game = Game.new
-    game.save
-    redirect_to game
   end
 
   def edit
   end
 
   def create
-    game = Game.new(games_params)
+    game = Game.new
 
     if game.save
       redirect_to game
@@ -25,13 +22,7 @@ class GamesController < ApplicationController
 
   def update
     game = Game.find(params[:id])
-
-    if game.update(games_params)
-      redirect_to game
-    else
-      # This should return an error code!
-      render text: 'not updated'
-    end
+    game.update(games_params)
   end
 
   def destroy
@@ -40,6 +31,6 @@ class GamesController < ApplicationController
 
   private
     def games_params
-      params.require(:game).permit(:boardstate)
+      params.require(:data).permit(:id, attributes: :boardstate)
     end
 end

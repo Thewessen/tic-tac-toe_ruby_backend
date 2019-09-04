@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_30_093046) do
+ActiveRecord::Schema.define(version: 2019_09_01_152748) do
 
   create_table "games", force: :cascade do |t|
     t.string "boardstate", default: " , , , , , , , , "
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "games_nicknames", id: false, force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "nickname_id"
+    t.index ["game_id"], name: "index_games_nicknames_on_game_id"
+    t.index ["nickname_id"], name: "index_games_nicknames_on_nickname_id"
+  end
+
+  create_table "nicknames", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,24 +1,31 @@
-# README
+# tic-tac-toe (back-end)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo contains the backend for a tic-tac-toe game made in Emberjs.
+The repo for the frontend can be found [here](https://github.com/Thewessen/tic-tac-toe_emberjs).
 
-Things you may want to cover:
+I have no experience with the Ruby programming language. Let alone the Ruby on Rails
+framework. I just recently divide into Laravel (php framework) which helped my
+learning process quite a bit.
 
-* Ruby version
+This app doesn't need much of a backend too run. But, creating this app also
+for learning, I wanted to make the backend an almost equal part of the app.
 
-* System dependencies
+## Dependencies
 
-* Configuration
+(Ruby comes preinstalled on Linux)
 
-* Database creation
+- Rails v6.0.0 `gem install rails`
+- sqlite3 v3.22.0 `apt install sqlite3 libsqlite3-dev ruby-sqlite3`
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+- `git clone <repository-url>` this repository
+- `cd tic-tac-toe_ruby_backend`
+- run `bundle install`
+- `rails db:migrate`
+- `rails db:seed`
+- `rails server`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Server should now be running no [http://localhost:3000/games](http://localhost:3000).
+Visit [/nicknames](http://localhost:3000/nicknames) to verify you have some
+response data.

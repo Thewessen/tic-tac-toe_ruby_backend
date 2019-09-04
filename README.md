@@ -14,13 +14,19 @@ for learning, I wanted to make the backend an almost equal part of the app.
 
 (Ruby comes preinstalled on Linux)
 
-- Rails v6.0.0
-  `gem install rails`
-- sqlite3 v3.22.0
-  `apt install sqlite3 libsqlite3-dev ruby-sqlite3`
+- Rails v6.0.0 `gem install rails`
+- sqlite3 v3.22.0 `apt install sqlite3 libsqlite3-dev ruby-sqlite3`
 
 ## Setup
 
-- This project is still empty
+- `git clone <repository-url>` this repository
+- `cd tic-tac-toe_ruby_backend`
+- run `bundle install`
+- run `npm install` (proprely not needed after clean-up)
+- `rails db:migrate`
+- `rails db:seed`
+- `rails server`
 
-_follow soon..._
+Server should now be running no [http://localhost:3000/games](http://localhost:3000).
+Visit [/nicknames](http://localhost:3000/nicknames) to verify you have some
+response data.
